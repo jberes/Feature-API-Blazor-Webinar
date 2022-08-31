@@ -1,3 +1,5 @@
+This is an example of create a .NET Core minimal API with a SQL Server backend that is consumed by a Blazor WebAssembly app. This is based on a webinar done on August 30th, 20022.
+
 # Watch the Webinar - Create & Deploy a .NET 6 Minimal Web API from SQL Server Data
 
 To watch the end-to-end video of creating this entire solution, watch this YouTube video or follow the step by step below (note, you really should watch the video for the full picture).
