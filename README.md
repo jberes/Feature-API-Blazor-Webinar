@@ -16,7 +16,7 @@ https://www.microsoft.com/en-us/Download/details.aspx?id=101064
 
 One you install, the next step is to install the SQL Server Management Studio. This is your IDE to add databases, create tables, views, queries, etc. Get SQL Server Management Studio from here:
 
- https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16
+https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16
 
 Once installed, open SQL Server Management Studio, and connect to your instance of SqlExpress (most likely '.\sqlexpress'), then click the New Query button, and run the SQL Script located here:
 
@@ -31,7 +31,8 @@ This will create the database, tables and insert the data into the created table
 
 Create new ASP.NET Core Web API project called **FeaturesApi**
 
-![image-20220823144104569](assets/3-CreateNewProjectFinish-16619849115058.png)
+![](https://github.com/jberes/Feature-API-Blazor-Webinar/blob/master/Images/3-CreateNewProjectFinish.png?raw=true)
+
 
 Once the project is created, right-click on the Project name and select Manage Nuget Packages, and add the following packages to your solution:
 
@@ -41,11 +42,8 @@ Once the project is created, right-click on the Project name and select Manage N
 
 * Microsoft.EntityFrameworkCore.Design
 
-![image-20220823144104569](assets/4-AddNugetPackages.png)
 
-
-
-
+![](https://github.com/jberes/Feature-API-Blazor-Webinar/blob/master/Images/4-AddNugetPackages.png?raw=true)
 
 Next, open the Package Manager console, and install the dotnet EF Tools:
 
@@ -53,10 +51,7 @@ Next, open the Package Manager console, and install the dotnet EF Tools:
 
 Note- use `ignore-failed-sources` if you have more than one source , especially if you are using any local Nuget feeds. If you don't include this, and the package can't be found, the install will fail.
 
-In secrets.json add your connection string
-
-
-
+Next, right click on your project name and select Manage User Secrets from the menu. In secrets.json add your connection string
 
 ```xml
 {
@@ -65,19 +60,11 @@ In secrets.json add your connection string
   }
 }
 ```
-
-
-
-
-
-
-
 In the Package Manager Console, create your models and db context using the dotnet-ef CLI tools that you installed.  To see a complete list of the CLI commands, check out this link: https://docs.microsoft.com/en-us/ef/core/cli/dotnet
 
 ```C#
 dotnet ef dbcontext scaffold Name=ConnectionStrings:LocalConnection Microsoft.EntityFrameworkCore.SqlServer -o Models --force
 ```
-
 
 In Program.cs, before the line that contains:
 
