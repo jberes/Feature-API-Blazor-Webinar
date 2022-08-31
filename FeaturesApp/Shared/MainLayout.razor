@@ -1,0 +1,28 @@
+@inherits LayoutComponentBase
+@inject NavigationManager NavigationManager
+
+<div class="column-layout master-view-container">
+    <IgbNavbar class="navbar" master-view-scope>
+        <div>
+            <IgbAvatar Src="assets/Logo.svg" Shape="AvatarShape.Circle" class="avatar" master-view-scope></IgbAvatar>
+            <IgbButton Variant="ButtonVariant.Flat" @onclick="@(e => Navigate(""))" class="button" master-view-scope>
+                Grid List
+                <IgbRipple></IgbRipple>
+            </IgbButton>
+            <IgbButton Variant="ButtonVariant.Flat" @onclick="@(e => Navigate("view-2"))" class="button" master-view-scope>
+                Master-Detail
+                <IgbRipple></IgbRipple>
+            </IgbButton>
+        </div>
+    </IgbNavbar>
+    <div class="view-container">
+        @Body
+    </div>
+</div>
+
+@code {
+    private void Navigate(string path)
+    {
+        NavigationManager.NavigateTo(path);
+    }
+}

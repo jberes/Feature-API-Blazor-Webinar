@@ -1,0 +1,63 @@
+@page "/view-2"
+@inject Features.FeaturesService featuresService
+
+<div class="row-layout view-2-container">
+    <div class="column-layout group">
+        <IgbList class="list" view-2-scope>
+            @foreach (var item in featuresFeatures)
+            {
+                <IgbListItem @onclick="(() => SelectedItemChanged(item))">
+                    <div slot="start">
+                        <IgbAvatar Shape="AvatarShape.Circle">
+                            <span class="material-icons">person</span>
+                        </IgbAvatar>
+                    </div>
+                    <div slot="title">@item.Title</div>
+                    <div slot="subtitle">@item.Product</div>
+                    <div slot="end">
+                        <span class="material-icons icon">
+                            star
+                        </span>
+                    </div>
+                </IgbListItem>
+            }
+        </IgbList>
+    </div>
+    <div class="column-layout group_1">
+        <h5 class="h5">
+            Feature Details
+        </h5>
+        @foreach (var item in featuresFeaturesId)
+        {
+            <IgbInput @bind-Value="@item.Title" Label="Title of Feature" Outlined="true" class="input" view-2-scope></IgbInput>
+            <IgbInput @bind-Value="@item.Description" Label="Description of Feature" Outlined="true" class="input" view-2-scope></IgbInput>
+            <IgbInput @bind-Value="@item.Product" Label="Product" Outlined="true" class="input" view-2-scope></IgbInput>
+            <IgbInput @bind-Value="@item.RequestorEmail" Label="Requestor Email" Outlined="true" class="input" view-2-scope></IgbInput>
+            <IgbInput @bind-Value="@item.DateAdded" Label="Date Added" Outlined="true" class="input" view-2-scope></IgbInput>
+        }
+    </div>
+</div>
+
+@code {
+    private Features.FeaturesType[] featuresFeatures = Array.Empty<Features.FeaturesType>();
+    private Features.FeaturesIdType[] featuresFeaturesId = Array.Empty<Features.FeaturesIdType>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        featuresFeatures = 
+            await featuresService.GetFeatures() ?? featuresFeatures;
+
+        featuresFeaturesId = 
+            await featuresService.GetFeaturesId(featuresFeatures.First().FeatureId.Value)
+            ?? featuresFeaturesId;
+    }
+
+    async void SelectedItemChanged(Features.FeaturesType feature)
+    {
+        featuresFeaturesId = await 
+            featuresService.GetFeaturesId(feature.FeatureId.Value)
+            ?? featuresFeaturesId;
+
+            StateHasChanged();
+    }
+}

@@ -1,0 +1,171 @@
+:root {
+    --igc-font-family: 'Titillium Web', sans-serif;
+}
+
+/* Charts */
+:root {
+    --charts-default-series: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+}
+igc-category-chart {
+    --brushes: var(--charts-default-series);
+    --outlines: var(--charts-default-series);
+    --marker-brushes: var(--charts-default-series);
+    --marker-outlines: var(--charts-default-series);
+    --negative-brushes: #ee5879;
+    --negative-outlines: #ee5879;
+    --title-text-color: hsla(var(--igc-gray-900));
+    --subtitle-text-color: hsla(var(--igc-gray-700));
+    --x-axis-label-text-color: hsla(var(--igc-gray-700));
+    --x-axis-title-text-color: hsla(var(--igc-gray-900));
+    --x-axis-stroke: hsla(var(--igc-gray-500));
+    --x-axis-tick-stroke: hsla(var(--igc-gray-500));
+    --y-axis-label-text-color: hsla(var(--igc-gray-700));
+    --y-axis-title-text-color: hsla(var(--igc-gray-900));
+    --y-axis-major-stroke: hsla(var(--igc-gray-300));
+    --y-axis-tick-stroke: hsla(var(--igc-gray-500));
+    --x-axis-label-text-style: normal 400 var(--igc-body-2-font-size) var(--igc-font-family);
+    --y-axis-label-text-style: normal 400 var(--igc-body-2-font-size) var(--igc-font-family);
+    --x-axis-title-text-style: normal 400 var(--igc-body-2-font-size) var(--igc-font-family);
+    --y-axis-title-text-style: normal 400 var(--igc-body-2-font-size) var(--igc-font-family);
+    --title-text-style: normal var(--igc-h6-font-weight) var(--igc-h6-font-size) var(--igc-font-family);
+    --subtitle-text-style: var(--igc-subtitle-1-font-weight) var(--igc-subtitle-1-font-size) var(--igc-font-family);
+}
+igc-pie-chart {
+    --brushes: var(--charts-default-series);
+    --outlines: var(--charts-default-series);
+    --label-extent: 30;
+    --label-outer-color: hsla(var(--igc-gray-700));
+    --text-style: normal 400 var(--igc-body-2-font-size) var(--igc-font-family);
+}
+
+/* Typography */
+h1 {
+    font-family: var(--igc-h1-font-family);
+    font-weight: var(--igc-h1-font-weight);
+    font-size: var(--igc-h1-font-size);
+    font-style: var(--igc-h1-font-style);
+    letter-spacing: var(--igc-h1-letter-spacing);
+    text-transform: var(--igc-h1-text-transform);
+    line-height: var(--igc-h1-line-height);
+}
+
+h2 {
+    font-family: var(--igc-h2-font-family);
+    font-weight: var(--igc-h2-font-weight);
+    font-size: var(--igc-h2-font-size);
+    font-style: var(--igc-h2-font-style);
+    letter-spacing: var(--igc-h2-letter-spacing);
+    text-transform: var(--igc-h2-text-transform);
+    line-height: var(--igc-h2-line-height);
+}
+
+h3 {
+    font-family: var(--igc-h3-font-family);
+    font-weight: var(--igc-h3-font-weight);
+    font-size: var(--igc-h3-font-size);
+    font-style: var(--igc-h3-font-style);
+    letter-spacing: var(--igc-h3-letter-spacing);
+    text-transform: var(--igc-h3-text-transform);
+    line-height: var(--igc-h3-line-height);
+}
+
+h4 {
+    font-family: var(--igc-h4-font-family);
+    font-weight: var(--igc-h4-font-weight);
+    font-size: var(--igc-h4-font-size);
+    font-style: var(--igc-h4-font-style);
+    letter-spacing: var(--igc-h4-letter-spacing);
+    text-transform: var(--igc-h4-text-transform);
+    line-height: var(--igc-h4-line-height);
+}
+
+h5 {
+    font-family: var(--igc-h5-font-family);
+    font-weight: var(--igc-h5-font-weight);
+    font-size: var(--igc-h5-font-size);
+    font-style: var(--igc-h5-font-style);
+    letter-spacing: var(--igc-h5-letter-spacing);
+    text-transform: var(--igc-h5-text-transform);
+    line-height: var(--igc-h5-line-height);
+}
+
+h6,
+igc-card-header h1[slot='title'],
+igc-card-header h2[slot='title'],
+igc-card-header h3[slot='title'],
+igc-card-header h4[slot='title'],
+igc-card-header h5[slot='title'] {
+    font-family: var(--igc-h6-font-family);
+    font-weight: var(--igc-h6-font-weight);
+    font-size: var(--igc-h6-font-size);
+    font-style: var(--igc-h6-font-style);
+    letter-spacing: var(--igc-h6-letter-spacing);
+    text-transform: var(--igc-h6-text-transform);
+    line-height: var(--igc-h6-line-height);
+}
+
+.typography__body-1 {
+    font-family: var(--igc-body-1-font-family);
+    font-weight: var(--igc-body-1-font-weight);
+    font-size: var(--igc-body-1-font-size);
+    font-style: var(--igc-body-1-font-style);
+    letter-spacing: var(--igc-body-1-letter-spacing);
+    text-transform: var(--igc-body-1-text-transform);
+    line-height: var(--igc-body-1-line-height);
+}
+
+.typography__body-2 {
+    font-family: var(--igc-body-2-font-family);
+    font-weight: var(--igc-body-2-font-weight);
+    font-size: var(--igc-body-2-font-size);
+    font-style: var(--igc-body-2-font-style);
+    letter-spacing: var(--igc-body-2-letter-spacing);
+    text-transform: var(--igc-body-2-text-transform);
+    line-height: var(--igc-body-2-line-height);
+}
+
+.typography__subtitle-1 {
+    font-family: var(--igc-subtitle-1-font-family);
+    font-weight: var(--igc-subtitle-1-font-weight);
+    font-size: var(--igc-subtitle-1-font-size);
+    font-style: var(--igc-subtitle-1-font-style);
+    letter-spacing: var(--igc-subtitle-1-letter-spacing);
+    text-transform: var(--igc-subtitle-1-text-transform);
+    line-height: var(--igc-subtitle-1-line-height);
+}
+
+.typography__subtitle-2,
+igc-card-header h1[slot='subtitle'],
+igc-card-header h2[slot='subtitle'],
+igc-card-header h3[slot='subtitle'],
+igc-card-header h4[slot='subtitle'],
+igc-card-header h5[slot='subtitle'],
+igc-card-header h6[slot='subtitle'] {
+    font-family: var(--igc-subtitle-2-font-family);
+    font-weight: var(--igc-subtitle-2-font-weight);
+    font-size: var(--igc-subtitle-2-font-size);
+    font-style: var(--igc-subtitle-2-font-style);
+    letter-spacing: var(--igc-subtitle-2-letter-spacing);
+    text-transform: var(--igc-subtitle-2-text-transform);
+    line-height: var(--igc-subtitle-2-line-height);
+}
+
+.typography__caption {
+    font-family: var(--igc-caption-font-family);
+    font-weight: var(--igc-caption-font-weight);
+    font-size: var(--igc-caption-font-size);
+    font-style: var(--igc-caption-font-style);
+    letter-spacing: var(--igc-caption-letter-spacing);
+    text-transform: var(--igc-caption-text-transform);
+    line-height: var(--igc-caption-line-height);
+}
+
+.typography__overline {
+    font-family: var(--igc-overline-font-family);
+    font-weight: var(--igc-overline-font-weight);
+    font-size: var(--igc-overline-font-size);
+    font-style: var(--igc-overline-font-style);
+    letter-spacing: var(--igc-overline-letter-spacing);
+    text-transform: var(--igc-overline-text-transform);
+    line-height: var(--igc-overline-line-height);
+}

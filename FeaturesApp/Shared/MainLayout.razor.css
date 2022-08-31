@@ -1,0 +1,32 @@
+.column-layout {
+    display: flex;
+    flex-direction: column;
+}
+.master-view-container {
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: flex-start;
+    height: 100%;
+}
+.navbar {
+    height: max-content;
+    min-width: min-content;
+}
+.view-container {
+    position: relative;
+    flex-grow: 1;
+}
+.avatar {
+    margin: 0 8px 0 0;
+}
+.avatar::part(base) {
+    background-color: transparent;
+}
+.button {
+    margin: 0 8px 0 0;
+    height: max-content;
+    min-width: min-content;
+}
+.button::part(base) {
+    color: hsla(var(--igc-gray-900));
+}

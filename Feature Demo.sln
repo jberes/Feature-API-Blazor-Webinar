@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FeaturesApi", "FeaturesApi\FeaturesApi\FeaturesApi.csproj", "{377B0745-296C-4D24-9C5C-EE4328D40918}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FeaturesApp", "FeaturesApp\FeaturesApp.csproj", "{4F8EF560-85A9-4A73-A59E-BC38D39A4186}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{377B0745-296C-4D24-9C5C-EE4328D40918}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{377B0745-296C-4D24-9C5C-EE4328D40918}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{377B0745-296C-4D24-9C5C-EE4328D40918}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{377B0745-296C-4D24-9C5C-EE4328D40918}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F8EF560-85A9-4A73-A59E-BC38D39A4186}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F8EF560-85A9-4A73-A59E-BC38D39A4186}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F8EF560-85A9-4A73-A59E-BC38D39A4186}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F8EF560-85A9-4A73-A59E-BC38D39A4186}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5B1FA16E-520E-46CC-90E4-38508DD6A669}
+	EndGlobalSection
+EndGlobal

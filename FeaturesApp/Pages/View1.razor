@@ -1,0 +1,25 @@
+@page "/"
+@inject Features.FeaturesService featuresService
+
+<div class="row-layout view-1-container">
+    <div class="column-layout group">
+        <IgbDataGrid DataSource="featuresFeatures" Density="ControlDisplayDensity.Cosy" AutoGenerateColumns="false" SelectionMode="GridSelectionMode.None" DefaultColumnMinWidth="136" class="grid" view-1-scope>
+            <IgbNumericColumn HeaderText="featureId" Field="FeatureId" IsFilteringEnabled="true"></IgbNumericColumn>
+            <IgbNumericColumn HeaderText="productId" Field="ProductId" IsFilteringEnabled="true"></IgbNumericColumn>
+            <IgbTextColumn HeaderText="title" Field="Title" IsFilteringEnabled="true"></IgbTextColumn>
+            <IgbTextColumn HeaderText="description" Field="Description" IsFilteringEnabled="true"></IgbTextColumn>
+            <IgbTextColumn HeaderText="requestorEmail" Field="RequestorEmail" IsFilteringEnabled="true"></IgbTextColumn>
+            <IgbTextColumn HeaderText="dateAdded" Field="DateAdded" IsFilteringEnabled="true"></IgbTextColumn>
+            <IgbTextColumn HeaderText="product" Field="Product" IsFilteringEnabled="true"></IgbTextColumn>
+        </IgbDataGrid>
+    </div>
+</div>
+
+@code {
+    private Features.FeaturesType[] featuresFeatures = Array.Empty<Features.FeaturesType>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        featuresFeatures = await this.featuresService.GetFeatures() ?? featuresFeatures;
+    }
+}
