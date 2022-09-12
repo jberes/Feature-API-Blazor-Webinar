@@ -7,6 +7,7 @@
             @foreach (var item in featuresFeatures)
             {
                 <IgbListItem @onclick="(() => SelectedItemChanged(item))">
+                    <IgbRipple></IgbRipple>
                     <div slot="start">
                         <IgbAvatar Shape="AvatarShape.Circle">
                             <span class="material-icons">person</span>
@@ -57,7 +58,7 @@
         featuresFeaturesId = await 
             featuresService.GetFeaturesId(feature.FeatureId.Value)
             ?? featuresFeaturesId;
-
+            
             StateHasChanged();
     }
 }

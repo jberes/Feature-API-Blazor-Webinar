@@ -38,11 +38,11 @@ app.UseHttpsRedirection();
 app.MapGet("/", () => "Hello World");
 
 app.MapGet("/features", async (FeaturesContext context) =>
-    await context.VwFeatureProducts.ToListAsync());
+    await context.Features.ToListAsync());
 
 app.MapGet("/features/{id}", async (FeaturesContext context, int id) =>
 {
-    var feature = await context.VwFeatureProducts
+    var feature = await context.Features
         .Where(f => f.FeatureId == id).ToListAsync();
     return feature;
 });

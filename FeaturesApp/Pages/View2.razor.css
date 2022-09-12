@@ -58,3 +58,6 @@
     height: max-content;
     min-width: min-content;
 }
+.selected {
+    background-color: red;
+}
